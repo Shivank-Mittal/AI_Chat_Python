@@ -4,15 +4,18 @@ from pydantic import BaseModel
 from typing import List
 from chat import gemini_chat
 from chat.bot import gemini_query
+from dto import gemini_input_dto
 
 app = FastAPI();
 app.add_middleware(
     CORSMiddleware,
         allow_origins= [
             "https://shivankmittal.com",
-            "https://www.shivankmittal.com"
-        ]
-    ,
+            "https://www.shivankmittal.com",
+            # "http://localhost:4200"
+        ],
+        allow_methods=["*"],
+         allow_headers=["*"],
 )
 
 # To me moved in its own class
@@ -30,7 +33,7 @@ def read_root():
 
 
 
-@app.get("/chat")
+@app.get("/server")
 def read_root():
     return True
         
@@ -40,6 +43,6 @@ def read_root():
     return gemini_chat.chat_health_check()
 
 
-@app.get("/chat/{content}")
-def chat_with_bot(content: str):
-    return gemini_chat.chat(content)
+@app.post("/chat")
+def chat_with_bot(dto: gemini_input_dto.Gemini_Input_DTO):
+    return gemini_chat.chat(dto.content)
