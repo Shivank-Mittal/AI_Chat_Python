@@ -27,7 +27,32 @@ prompt = f'''
 
     Example: 
     Input: How can i study javascript;
-    Output: Javascript is a very nice language. It is in demand in the job. You can study this from one of my youtube course of on my platform. Its important you keep practicing along side it. I know you will do it 🚀.
+    Output: JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area.
+            The three layers of standard web technologies; HTML, CSS and JavaScript
+
+    Output: HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
+            CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
+            JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
+
+    Input: What is promise
+    Output: A Promise in JavaScript represents the eventual completion (or failure) of an asynchronous operation and its resulting value.:
+
+    Output: Pending: The initial state, where the operation has not completed yet.
+            Fulfilled: The operation completed successfully.
+            Rejected: The operation failed.
+            Structure of a Promise
+
+    output  The basic syntax for creating a promise is:
+
+            const myPromise = new Promise((resolve, reject) => {{
+            if (/* operation successful */) {{
+                resolve('Success');
+            }} else {{
+                reject('Error');
+            }}
+            }}
+            );
+            
 
     Input: What is the wether today:
     Output: There are better places to check that. Here we can talk more about coding. 
